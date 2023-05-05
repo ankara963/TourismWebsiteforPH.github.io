@@ -1,14 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>hello world</h1>
-    <p>astig naka commit ako hahahaha</p>
-    <button>hashsahashash</button>
-</body>
+<html>
+  <head>
+    <title>Pizza Restaurant Locations</title>
+    <style>
+      #map {
+        height: 500px;
+        width: 100%;
+      }
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+    <script src="app.js"></script>
+  </head>
+  <body>
+    <h1>Pizza Restaurant Locations</h1>
+    <div id="map"></div>
+
+    <script>
+        function initMap() {
+  var map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 10,
+    center: { lat: 37.7749, lng: -122.4194 },
+  });
+
+  var marker1 = new google.maps.Marker({
+    position: { lat: 37.7882, lng: -122.407 },
+    map: map,
+    title: "Pizza Restaurant 1",
+  });
+
+  var marker2 = new google.maps.Marker({
+    position: { lat: 37.7975, lng: -122.4054 },
+    map: map,
+    title: "Pizza Restaurant 2",
+  });
+
+  var marker3 = new google.maps.Marker({
+    position: { lat: 37.7739, lng: -122.4307 },
+    map: map,
+    title: "Pizza Restaurant 3",
+  });
+}
+
+initMap();
+
+    </script>
+  </body>
 </html>
